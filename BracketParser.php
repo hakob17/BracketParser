@@ -1,17 +1,34 @@
 /**
-* Created by hakob on 5/9/16.
+* @license MIT
+* @author hakob on 5/9/16.
 */
 
 
-<?php class BracketParser
-{
+<?php
 
+/**
+ * [write a short description of what this class does]
+ *
+ * [is there an even more longer description of this class'
+ *  features?]
+ *
+ * @author
+ * @since
+ */
+class BracketParser
+{
+    /**
+     * @var array $stack
+     *
+     */	
     private static $stack = [];
 
     /**
-     * @param $symbol
+     * [Provide a short description for this method]
+     *
+     * @access private
+     * @param [typeof] $symbol
      * @return string
-     * This function returns the pair of the bracket
      */
     private static function returnPair($symbol)
     {
@@ -33,9 +50,10 @@
     }
 
     /**
-     * @param $line
+     * [provide a short description here]
+     *
+     * @param [typeeof]  $line
      * @return bool
-     * This parses the String
      */
     public static function parse($line)
     {
@@ -84,10 +102,11 @@
     }
 
     /**
+     * [bad documentation style, provide a short desc first]
+     *
      * @param array $s
      * @param $ch
      * @return bool
-     *
      */
     private static function compare($ch)
     {
@@ -100,4 +119,4 @@
     }
 }
 
-?>
+#-->obsolete, remove it ?>
