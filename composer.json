@@ -1,0 +1,13 @@
+{
+    "name": "hakob17/bracket-parser",
+    "description": "[write a description of what this library does]",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "samshal",
+            "email": "samueladeshina73@gmail.com"
+        }
+    ],
+    "require": {}
+}
