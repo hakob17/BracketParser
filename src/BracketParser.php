@@ -1,19 +1,11 @@
-/**
-* @license MIT
-* @author hakob on 5/9/16.
-*/
-
-
 <?php
 
 /**
- * [write a short description of what this class does]
+ * BracketParser Class
  *
- * [is there an even more longer description of this class'
- *  features?]
- *
- * @author
- * @since
+ * @author hakob
+ * @since 5/9/16
+ * @license MIT
  */
 class BracketParser
 {
@@ -24,10 +16,14 @@ class BracketParser
     private static $stack = [];
 
     /**
-     * [Provide a short description for this method]
+     * returns the counterpart of the given symbol
+     * 
+     * #
+     * # Suggestion:
+     * #
+     * # Rename this method to fetchClosingCounterpart($chr)
      *
-     * @access private
-     * @param [typeof] $symbol
+     * @param string $symbol
      * @return string
      */
     private static function returnPair($symbol)
@@ -50,9 +46,15 @@ class BracketParser
     }
 
     /**
-     * [provide a short description here]
+     * parses a line
      *
-     * @param [typeeof]  $line
+     * #
+     * # Suggestions:
+     * # 
+     * # change $line to $string
+     * #
+     * 
+     * @param string $line
      * @return bool
      */
     public static function parse($line)
@@ -77,8 +79,15 @@ class BracketParser
     }
 
     /**
-     * @param array $s
-     * @param $ch
+     * pushes a character to the current stack.
+     * 
+     * #
+     * # suggestion:
+     * #
+     * # change $ch to $chr
+     * #
+     * 
+     * @param string $ch
      * @return bool
      *
      */
@@ -102,10 +111,15 @@ class BracketParser
     }
 
     /**
-     * [bad documentation style, provide a short desc first]
+     * compares a character to the current stack.
+     * 
+     * #
+     * # Suggestion:
+     * #
+     * # change $ch to $chr
+     * #
      *
-     * @param array $s
-     * @param $ch
+     * @param string $ch
      * @return bool
      */
     private static function compare($ch)
@@ -118,5 +132,3 @@ class BracketParser
         return false;
     }
 }
-
-#-->obsolete, remove it ?>
