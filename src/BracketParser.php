@@ -1,17 +1,30 @@
+<?php
+
 /**
-* Created by hakob on 5/9/16.
-*/
-
-
-<?php class BracketParser
+ * BracketParser Class
+ *
+ * @author hakob
+ * @since 5/9/16
+ * @license MIT
+ */
+class BracketParser
 {
-
+    /**
+     * @var array $stack
+     *
+     */	
     private static $stack = [];
 
     /**
-     * @param $symbol
+     * returns the counterpart of the given symbol
+     * 
+     * #
+     * # Suggestion:
+     * #
+     * # Rename this method to fetchClosingCounterpart($chr)
+     *
+     * @param string $symbol
      * @return string
-     * This function returns the pair of the bracket
      */
     private static function returnPair($symbol)
     {
@@ -33,9 +46,16 @@
     }
 
     /**
-     * @param $line
+     * parses a line
+     *
+     * #
+     * # Suggestions:
+     * # 
+     * # change $line to $string
+     * #
+     * 
+     * @param string $line
      * @return bool
-     * This parses the String
      */
     public static function parse($line)
     {
@@ -59,8 +79,15 @@
     }
 
     /**
-     * @param array $s
-     * @param $ch
+     * pushes a character to the current stack.
+     * 
+     * #
+     * # suggestion:
+     * #
+     * # change $ch to $chr
+     * #
+     * 
+     * @param string $ch
      * @return bool
      *
      */
@@ -84,10 +111,16 @@
     }
 
     /**
-     * @param array $s
-     * @param $ch
-     * @return bool
+     * compares a character to the current stack.
+     * 
+     * #
+     * # Suggestion:
+     * #
+     * # change $ch to $chr
+     * #
      *
+     * @param string $ch
+     * @return bool
      */
     private static function compare($ch)
     {
@@ -99,5 +132,3 @@
         return false;
     }
 }
-
-?>
